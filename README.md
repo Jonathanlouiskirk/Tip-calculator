@@ -14,6 +14,8 @@ Hello, my name is Jonathan. Welcome to my terrific tip calculator. Below you wil
 
         
         
+
+
 *1.The program will calaculate and display the correct amount of tip owed.
 
 *2.The program will calculate and display the total amount of the bill with tax.
