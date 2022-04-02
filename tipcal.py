@@ -12,19 +12,23 @@ bill = float(input('Please enter the bill total?\n'))
 print()#leaving a space in between the lines for readability
 patrons = int(input('How many patrons in the party?\n'))
 print()
+sales_tax = .07
+sales_tax_owed = (bill * sales_tax)
 tip = int(input('Percentage of tip given for service?\n'))
 print()
 tip_percentage = tip / 100.00 # "user input" for the variable {Tip} divided by 100 is the percentage equation and is assigned to a variable
 print()
 total_tip_given =  bill * tip_percentage # "user input" for {bill} times {tip_percentage} is equation for total tip given and assigned to a variable
 print()
-grand_total_amount = bill + total_tip_given # "user input" {bill} plus {total_tip_given} is equation for grand total amount and assigned to variable
+grand_total_amount = bill + total_tip_given + sales_tax # "user input" {bill} plus {total_tip_given} is equation for grand total amount and assigned to variable
 print()
 amount_per_patron = grand_total_amount / patrons # grand total amount of bill and tax times the amount of patrons using two variables
 print()
 grand_total = '{:.2f}'.format(amount_per_patron) # giving the grand total using the .format function and the {amount_per_patron} variable and the .2f meaning to format the display message 2 digits after the decimal point. (found this on Google. I could'nt figure out how to make it put the decimal point in to show the correct float format. figuring out this math was harder than the coding lol)
 print()
 print(f'Total tip amount: ${total_tip_given}')
+print()
+print(f'Tax:{sales_tax_owed}')
 print()
 print(f'Each patron should pay: ${grand_total}') #use a print statement with a f string and the {grand_total} variable to print out the total each patron should pay
 print()
